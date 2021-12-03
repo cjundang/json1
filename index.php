@@ -53,7 +53,7 @@
 
         $("#json1").click(()=>{
          
-            var url = "http://127.0.0.1/data.json";
+            var url = "http://cj-android-demon.herokuapp.com/json2.php";
             console.log(url);
             $.get(url, (data, status)=>{
                 console.log(data);
