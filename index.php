@@ -35,6 +35,8 @@
                         line += "<td>"+ item.userId + "</td>";
 
                         line += "</tr>";
+                    $("#tblPosts").append(line);
+
                 });
             })
             .fail((xhr, status, error)=>{
