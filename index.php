@@ -24,19 +24,20 @@
 function loadJSON(){
     var url = "https://cj-android-demon.herokuapp.com/json2.php";
 
-    $.getJSON(url)
+$.getJSON(url)
         .done((data)=>{
             console.log(data);
             $.each(data,  (k, item)=>{
                 console.log(k);
                 console.log(item);
+                var line = "<tr>";
+                    line += "<td>" + (k+1) + "</td>";
+                    line += "<td>" + item.fname + "</td>";
+                    line += "<td>" + item.lname + "</td>";
+                    line += "</tr>";
+                
             });
 
-
-
-
-
-        })
         .fail((xhr, status, err)=>{
 
         });
