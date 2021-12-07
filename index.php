@@ -33,7 +33,7 @@
                         line += "<td>"+ item.id + "</td>";
                         line += "<td><b>"+ item.title + "</b><br/>";
                         line += item.body + "</td>";
-                        line += "<td> link </td>";
+                        line += "<td> <a href='https://jsonplaceholder.typicode.com/posts/2' >link</a> </td>";
 
                         line += "</tr>";
                     $("#tblPosts").append(line);
