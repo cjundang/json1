@@ -14,7 +14,7 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th> <th>Title</th><th>Author</th>
+                <th>ID</th> <th>Title</th><th> Details </th>
             </tr>
         </thead>
         <tbody id="tblPosts">
@@ -34,11 +34,9 @@
                         line += "<td><b>"+ item.title + "<b><br/>";
                         line += item.body + "</td>";
                         line += "<td> link </td>";
- 
 
                         line += "</tr>";
                     $("#tblPosts").append(line);
-
                 });
             })
             .fail((xhr, status, error)=>{
