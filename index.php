@@ -24,7 +24,7 @@
     </table>
 </div>
 
-<div id="details">
+<div id="detail">
     sssssss
 
 </div>
