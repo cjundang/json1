@@ -11,7 +11,7 @@
 
 </head>
 <body>
-
+<button id="btnBack"> back </button>
 <div id="main">
     <table>
         <thead>
@@ -57,6 +57,9 @@
 
     $(()=>{
         loadPosts();
+        $("#btnBack").click(()=>{
+            $("#main").show();
+        });
     })
 
 </script>
