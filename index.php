@@ -22,9 +22,9 @@
 <script>
  
 function loadJSON(){
-    var url = "https://cj-android-demon.herokuapp.com/json2.php";
+    var url = "https://cj-android-demon.herokuapp.com/json1.php";
 
-$.getJSON(url)
+    $.getJSON(url)
         .done((data)=>{
             console.log(data);
             $.each(data,  (k, item)=>{
@@ -35,9 +35,10 @@ $.getJSON(url)
                     line += "<td>" + item.fname + "</td>";
                     line += "<td>" + item.lname + "</td>";
                     line += "</tr>";
-                
+                $("#tblStudent").append(line);
             });
 
+        })
         .fail((xhr, status, err)=>{
 
         });
