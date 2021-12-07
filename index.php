@@ -11,6 +11,8 @@
 
 </head>
 <body>
+
+<div id="main">
     <table>
         <thead>
             <tr>
@@ -20,9 +22,17 @@
         <tbody id="tblPosts">
         </tbody>
     </table>
+</div>
+
+    
+
+
 </body>
 
 <script>
+    function showDetails(){
+        $("#main").hide();
+    }
     function loadPosts(){
         var url = "https://jsonplaceholder.typicode.com/posts";
         $.getJSON(url)
@@ -33,11 +43,12 @@
                         line += "<td>"+ item.id + "</td>";
                         line += "<td><b>"+ item.title + "</b><br/>";
                         line += item.body + "</td>";
-                        line += "<td> <a href='https://jsonplaceholder.typicode.com/posts/2' >link</a> </td>";
+                        line += "<td> <button onClick='showDetails();' > link </button> </td>";
 
                         line += "</tr>";
                     $("#tblPosts").append(line);
                 });
+                $("#main").show();
             })
             .fail((xhr, status, error)=>{
 
