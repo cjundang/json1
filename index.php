@@ -19,6 +19,8 @@ function loadJSON(){
     $.getJSON(url)
         .done((data)=>{
             console.log(data);
+            console.log(data[1]);
+            console.log(data[2].fname);
           //  $("#fname").text(data.fname);
         })
         .fail((xhr, status, err)=>{
