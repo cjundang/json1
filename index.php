@@ -31,7 +31,7 @@
                     console.log(item);
                     var line = "<tr>";
                         line += "<td>"+ item.id + "</td>";
-                        line += "<td><b>"+ item.title + "<b><br/>";
+                        line += "<td><b>"+ item.title + "</b><br/>";
                         line += item.body + "</td>";
                         line += "<td> link </td>";
 
