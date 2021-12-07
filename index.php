@@ -24,6 +24,11 @@
     </table>
 </div>
 
+<div id="details">
+    sssssss
+
+</div>
+
     
 
 
@@ -32,6 +37,7 @@
 <script>
     function showDetails(id){
         $("#main").hide();
+        $("#detail").show();
         var url = "https://jsonplaceholder.typicode.com/posts/"+id;
         $.getJSON(url)
             .done((data)=>{
@@ -43,6 +49,9 @@
             })
     }
     function loadPosts(){
+        $("#main").show();
+        $("#details").hide();
+        
         var url = "https://jsonplaceholder.typicode.com/posts";
         $.getJSON(url)
             .done((data)=>{
@@ -65,6 +74,7 @@
     }
 
     $(()=>{
+
         loadPosts();
         $("#btnBack").click(()=>{
             $("#main").show();
