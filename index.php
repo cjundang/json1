@@ -30,8 +30,17 @@
 </body>
 
 <script>
-    function showDetails(){
+    function showDetails(id){
         $("#main").hide();
+        var url = "https://jsonplaceholder.typicode.com/posts/"+id;
+        $.getJSON(url)
+            .done((data)=>{
+                console.log(data);
+
+            })
+            .fail((xhr, status, error)=>{
+
+            })
     }
     function loadPosts(){
         var url = "https://jsonplaceholder.typicode.com/posts";
@@ -43,7 +52,7 @@
                         line += "<td>"+ item.id + "</td>";
                         line += "<td><b>"+ item.title + "</b><br/>";
                         line += item.body + "</td>";
-                        line += "<td> <button onClick='showDetails();' > link </button> </td>";
+                        line += "<td> <button onClick='showDetails("+ item.id +");' > link </button> </td>";
 
                         line += "</tr>";
                     $("#tblPosts").append(line);
