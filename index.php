@@ -28,7 +28,7 @@
         $.getJSON(url)
             .done((data)=>{
                 $.each(data, (k, item)=>{
-                    consol.log(item);
+                    console.log(item);
                 });
             })
             .fail((xhr, status, error)=>{
